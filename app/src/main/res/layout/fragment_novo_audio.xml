@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NovoAudioFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFD7BC"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/BtnGravar"
+            android:layout_width="292dp"
+            android:layout_height="301dp"
+            android:backgroundTint="#009FAD"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:text="@string/BTNGravar"
+            android:textSize="50sp"
+            app:cornerRadius="1000dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.518" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/raposa_icon" />
+
+        <EditText
+            android:id="@+id/editTitulo"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="#69E9F4"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVTitulo" />
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="#69E9F4"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVData" />
+
+        <TextView
+            android:id="@+id/TVData"
+            android:layout_width="106dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:gravity="center"
+            android:text="@string/TVData"
+            android:textColor="#000000"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.722"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTitulo" />
+
+        <TextView
+            android:id="@+id/TVTitulo"
+            android:layout_width="197dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:gravity="center"
+            android:text="@string/TVTitulo"
+            android:textColor="#000000"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toEndOf="@+id/TVIfox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033" />
+
+        <TextView
+            android:id="@+id/TVIfox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:text="@string/TVIfox"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.037" />
+
+        <Button
+            android:id="@+id/BtnReproduzir"
+            android:layout_width="184dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F28749"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:text="@string/BTNReproduzir"
+            android:textSize="30sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BtnGravar" />
+
+        <Button
+            android:id="@+id/BtnSalvar"
+            android:layout_width="184dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F28749"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:text="@string/BTNSalvar"
+            android:textSize="30sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BtnReproduzir" />
+
+        <Button
+            android:id="@+id/BtnDeletar"
+            android:layout_width="184dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F28749"
+            android:fontFamily="@font/pathway_gothic_one"
+            android:text="@string/BTNDeletar"
+            android:textSize="30sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BtnSalvar"
+            app:layout_constraintVertical_bias="0.031" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">I-FOX-V1</string>
+
+    //RELACIONADOS COM O PROJETO
+    <string name="titulo_projeto">I-FOX</string>
+    <string name="subtitulo_projeto">ensino digital moderno e dinâmico  </string>
+    <string name="boas_vindas">BEM VINDO AO</string>
+
+    //MENU DE NAVEGAÇÃO
+    <string name="menu_home">HOME</string>
+    <string name="menu_perfil">PERFIL</string>
+    <string name="menu_feed">FEED</string>
+    <string name="menu_loja">LOJA</string>
+    <string name="menu_lembretes">LEMBRETES</string>
+
+    //FORMULÁRIOS
+    <string name="cadastre_se">CADASTRE-SE</string>
+    <string name="continuar">Continuar</string>
+    <string name="logar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="usuario">USUÁRIO: </string>
+    <string name="senha">SENHA: </string>
+    <string name="dica_senha">Utilize pelo menos 8 dígitos, 1 número e 1 caractere especial</string>
+    <string name="cadastresse">Não possui uma conta? Cadastre-se aqui </string>
+
+    <string name="data_nasc">DATA DE NASCIMENTO</string>
+    <string name="email">EMAIL</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_inicial_aluno">InicialAlunoActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_tela_principal_aluno">TelaPrincipalAluno</string>
+    <string name="title_activity_tela_home_aluno">TelaHomeAluno</string>
+
+    //TELA DE CADERNOS
+
+    <string name="seus_cadernos">SEUS CADERNOS</string>
+    <string name="criar_caderno">CRIAR CADERNO</string>
+    <string name="sem_caderno">NENHUM CADERNO CADASTRADO, CRIE UM</string>
+    <string name="novo_caderno">NOVO CADERNO</string>
+    <string name="titulo">Título:</string>
+    <string name="icone">Selecione um ícone::</string>
+    <string name="descricao">Descrição:</string>
+    <string name="salvar">Salvar</string>
+
+    //TELA MATÉRIA
+
+    //TELA RESUMOS AUDIO
+    //referencia dos textos acima do botão gravar
+    <string name="TVTitulo">Título do Áudio</string>
+    <string name="TVIfox">I-FOX</string>
+    <string name="TVData">Data</string>
+
+    //referencia do botão gravar
+    <string name="BTNGravar">GRAVAR</string>
+
+    //referencia dos botões inferiores
+    <string name="BTNReproduzir">REPRODUZIR</string>
+    <string name="BTNSalvar">SALVAR</string>
+    <string name="BTNDeletar">DELETAR</string>
+
+</resources>

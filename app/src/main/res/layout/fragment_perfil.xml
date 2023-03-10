@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PerfilFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/azulClaro"
+        android:fontFamily="@font/pathway_gothic_one"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Aqui vai vir o conteúdo de perfil, no segundo sprint, aguarde novidades!"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
+</FrameLayout>

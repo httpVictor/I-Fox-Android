@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bege"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pathway_gothic_one"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/titulo_projeto"
+        android:textColor="@color/preto"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sue_ellen_francisco"
+        android:text="@string/subtitulo_projeto"
+        android:textColor="@color/preto"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
+        app:layout_constraintStart_toStartOf="@+id/tvTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <ImageView
+        android:id="@+id/imgRaposa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvSubtitulo"
+        app:layout_constraintStart_toStartOf="@+id/tvSubtitulo"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo"
+        app:srcCompat="@drawable/raposa_circilo" />
+
+    <TextView
+        android:id="@+id/tvFrases"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/verdeClaro"
+        android:fontFamily="@font/pathway_gothic_one"
+        android:padding="8dp"
+        android:text="frases vao vir aqui"
+        android:textAlignment="center"
+        android:textColor="@color/preto"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgRaposa"
+        app:layout_constraintStart_toStartOf="@+id/imgRaposa"
+        app:layout_constraintTop_toBottomOf="@+id/imgRaposa" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:fontFamily="@font/pathway_gothic_one"
+        android:text="@string/continuar"
+        android:textColor="@color/branco"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvFrases"
+        app:layout_constraintStart_toStartOf="@+id/tvFrases"
+        app:layout_constraintTop_toBottomOf="@+id/tvFrases" />
+</androidx.constraintlayout.widget.ConstraintLayout>
