@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.TelaHomeAluno;
@@ -29,6 +30,8 @@ public class TelaLogin extends AppCompatActivity {
         tvCadastrar = findViewById(R.id.tvCadastresse);
         etUsuario = findViewById(R.id.etUsuarioLogin);
         etUsuario = findViewById(R.id.etSenhaLogin);
+
+        //VALIDAÇÕES
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
