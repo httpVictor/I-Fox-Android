@@ -2,6 +2,7 @@ package com.example.i_fox_v1.telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,8 @@ public class TelaCadastro extends AppCompatActivity {
                 String nome = etUsuario.getText().toString();
                 String senha = etSenha.getText().toString();
 
+                boolean validarSenha = false;
+                boolean validarUsuario = false;
                 //VALIDAÇÕES DO USUÁRIO
                 if (nome.length() < 1){
                     Toast.makeText(TelaCadastro.this, "Nome muito curto", Toast.LENGTH_SHORT).show();
@@ -47,6 +50,8 @@ public class TelaCadastro extends AppCompatActivity {
                     }else{
                         if (nome != null){
                             Toast.makeText(TelaCadastro.this, "Insira um nome válido", Toast.LENGTH_SHORT).show();
+                        }else{
+                            validarUsuario = true;
                         }
                     }
                 }
@@ -65,11 +70,16 @@ public class TelaCadastro extends AppCompatActivity {
                         if ( senha != null) {
 
                             Toast.makeText(TelaCadastro.this, "Insira uma senha válida", Toast.LENGTH_SHORT).show();
+                        }else{
+                            validarSenha = true;
                         }
                     }
                 }
 
-
+                if(validarSenha && validarUsuario){
+                    Intent intent = new Intent(TelaCadastro.this, TelaLogin.class);
+                    finish();
+                }
                 //RETORNANDO UM AVISO DE SUCESSO CASO FUNCIONE
 
                 //RETORNANDO POSSÍVEIS ERROS...

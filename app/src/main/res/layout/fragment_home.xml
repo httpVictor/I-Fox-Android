@@ -67,47 +67,36 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imgBtnMap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/shape_botao_inicio"
                 android:padding="8dp"
                 android:src="@drawable/mapa_icon"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnClock"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/shape_botao_inicio"
-                android:padding="8dp"
-                android:src="@drawable/mapa_icon"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_botao_inicio"
-                android:padding="8dp"
-                android:src="@drawable/mapa_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnClock"
+                android:layout_width="59dp"
+                android:layout_height="56dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/shape_botao_inicio"
                 android:padding="8dp"
-                android:src="@drawable/mapa_icon"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                android:src="@drawable/pomodoro_icon"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnBell"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgBtnBell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_botao_inicio"
+                android:padding="8dp"
+                android:src="@drawable/alarme2"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,7 +133,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/TVCadernoCad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"

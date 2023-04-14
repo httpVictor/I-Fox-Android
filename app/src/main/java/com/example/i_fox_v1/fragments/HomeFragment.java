@@ -1,20 +1,16 @@
 package com.example.i_fox_v1.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.i_fox_v1.R;
 
@@ -26,6 +22,11 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         Button btnCriarCad = view.findViewById(R.id.btnCriarCad);
+        ImageButton imgBtnMap = view.findViewById(R.id.imgBtnMap);
+        ImageButton imgBtnClock = view.findViewById(R.id.imgBtnClock);
+        ImageButton imgBtnBell = view.findViewById(R.id.imgBtnBell);
+        TextView TVCadernoCad = view.findViewById(R.id.TVCadernoCad);
+
 
         btnCriarCad.setOnClickListener(new View.OnClickListener() {
             @Override

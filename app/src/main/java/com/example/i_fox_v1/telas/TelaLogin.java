@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.TelaHomeAluno;
+import com.example.i_fox_v1.classes.Usuario;
 
 public class TelaLogin extends AppCompatActivity {
 
@@ -37,6 +38,11 @@ public class TelaLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //CRIANDO OBJETO DE USUÁRIO
+                //criando uma variavel para puxar os textos da tela
+               String nomeUsuario = etUsuario.getText().toString();
+               String senhaUsuario = etUsuario.getText().toString();
+
+                Usuario usuario = new Usuario(nomeUsuario, senhaUsuario);
 
                 //CONFIRMAR SE O USUÁRIO EXISTE E SE A SENHA CONDIZ COM A DAQUELE USUÁRIO
 
