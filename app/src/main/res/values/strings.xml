@@ -61,4 +61,33 @@
     <string name="BTNSalvar">SALVAR</string>
     <string name="BTNDeletar">DELETAR</string>
 
+
+    //REFERENCIAS DA TELA PERFIL
+
+    <string name="textNome">Oi **********</string>
+    <string name="textTexto">Aqui você pode ver e editar os dados do seu perfil:</string>
+    <string name="textUsuario">Usuário</string>
+    <string name="editTextUsuario"></string>
+    <string name="editTextSenha"></string>
+    <string name="textSenha">Senha</string>
+    <string name="textEmail">Email</string>
+
+    //REFERENCIAS DA TELA POMODORO
+    <string name="textExplicacao">**** aqui você pode iniciar o temporizador para o método POMODORO</string>
+    <string name="textTempo1">Tempo de foco:</string>
+    <string name="textTempo2">Tempo de descanso:</string>
+    <string name="textTempo3">Quantidade de pomos que deseja fazer:</string>
+    <string name="button">INICIAR</string>
+    <string name="button2">RELATÓRIO</string>
+    <string name="textView8">Definir o tempo do pomodoro:</string>
+    <string name="textView4">Resumo de Fotos</string>
+    <string name="button3">O que é o método pomodoro</string>
+
+    //REFERENCIAS DA TELA DE RESUMO ESCRITO
+
+    <string name="subtitulo_tela">RESUMO ESCRITO</string>
+    <string name="textTitulo">Título</string>
+    <string name="textData">Data</string>
+    <string name="textAnotacoes">Anotações</string>
+    <string name="btSalvar">SALVAR</string>
 </resources>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -15,9 +17,18 @@
     <color name="laranjaClaro">#F28749</color>
     <color name="laranjaEscuro">#D9653B</color>
     <color name="azulClaro">#69E9F4</color>
+    <color name="verdeEscuro">#7BA852</color>
+    <color name="azulMeio">#60B5B3</color>
 
     //cores auxiliares
     <color name="branco">#ffffff</color>
     <color name="preto">#000000</color>
     <color name="transparente">@android:color/transparent</color>
+
+
+
+
+
+
+
 </resources>

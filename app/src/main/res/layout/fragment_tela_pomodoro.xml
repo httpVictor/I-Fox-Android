@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tela_pomodoro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFD7BC"
+        tools:context=".telaPomodoro">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLogo"
+            android:layout_width="177dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/titulo_projeto"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/raposa_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintInicio"
+            android:layout_width="328dp"
+            android:layout_height="159dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_pomodoro_um"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLogo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLogo"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLogo">
+
+            <TextView
+                android:id="@+id/textExplicacao"
+                android:layout_width="291dp"
+                android:layout_height="164dp"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:gravity="center"
+                android:text="@string/textExplicacao"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="107dp"
+                android:layout_height="60dp"
+                android:src="@drawable/raposa_cadernos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textExplicacao"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.905" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contraintTempo1"
+            android:layout_width="153dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_perfil_foto"
+            app:layout_constraintStart_toStartOf="@+id/constraintInicio"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <TextView
+                android:id="@+id/textTempo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/textTempo1"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="99dp"
+                android:layout_height="35dp"
+                android:background="@drawable/shape_pomodoro_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textTempo1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textTempo1"
+                app:layout_constraintTop_toBottomOf="@+id/textTempo1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="153dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_perfil_foto"
+            app:layout_constraintEnd_toEndOf="@+id/constraintInicio"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toEndOf="@+id/contraintTempo1"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <TextView
+                android:id="@+id/textTempo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/textTempo2"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="99dp"
+                android:layout_height="35dp"
+                android:background="@drawable/shape_pomodoro_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textTempo2"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="@+id/textTempo2"
+                app:layout_constraintTop_toBottomOf="@+id/textTempo2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="275dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_perfil_foto"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+            app:layout_constraintStart_toStartOf="@+id/contraintTempo1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+            <TextView
+                android:id="@+id/textTempo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:gravity="center"
+                android:text="@string/textTempo3"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_pomodoro_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textTempo3"
+                app:layout_constraintStart_toStartOf="@+id/textTempo3"
+                app:layout_constraintTop_toBottomOf="@+id/textTempo3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.893"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verdeClaro"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/button"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/button3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.534"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verdeClaro"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/button2"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/button"
+                app:layout_constraintStart_toStartOf="@+id/button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/sue_ellen_francisco"
+            android:text="@string/textView8"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="278dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="169dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/sue_ellen_francisco"
+            android:text="@string/button3"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintInicio"
+            app:layout_constraintStart_toStartOf="@+id/constraintInicio"
+            app:layout_constraintTop_toTopOf="@+id/constraintInicio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

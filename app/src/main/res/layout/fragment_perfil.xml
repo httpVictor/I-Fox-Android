@@ -1,20 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.PerfilFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/azulClaro"
-        android:fontFamily="@font/pathway_gothic_one"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="Aqui vai vir o conteúdo de perfil, no segundo sprint, aguarde novidades!"
-        android:textColor="@color/black"
-        android:textSize="34sp" />
+        android:background="#EFD7BC"
+        tools:context=".telaPerfil">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="169dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/titulo_projeto"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/raposa_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.658"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="382dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/shape_perfil_foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="122dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="16dp"
+                android:src="@android:drawable/ic_menu_camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507" />
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="@string/textNome"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.205"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.518" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sue_ellen_francisco"
+            android:text="@string/textTexto"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="391dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/textTexto"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="@+id/textTexto"
+            app:layout_constraintTop_toBottomOf="@+id/textTexto">
+
+            <EditText
+                android:id="@+id/editTextUsuario"
+                android:layout_width="249dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/shape_perfil_parte_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/editTextUsuario"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.461" />
+
+            <TextView
+                android:id="@+id/textUsuario"
+                android:layout_width="79dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_perfil_parte_um"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:gravity="center"
+                android:text="@string/textUsuario"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editTextUsuario"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.407" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <TextView
+                android:id="@+id/textSenha"
+                android:layout_width="79dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_perfil_parte_um"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:gravity="center"
+                android:text="@string/textSenha"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editTextSenha"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.71" />
+
+            <EditText
+                android:id="@+id/editTextSenha"
+                android:layout_width="249dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_perfil_parte_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/editTextSenha"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintHorizontal_bias="0.178"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="79dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_perfil_parte_um"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:gravity="center"
+                android:text="@string/textEmail"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editTextEmail"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.733" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="249dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/shape_perfil_parte_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </FrameLayout>
