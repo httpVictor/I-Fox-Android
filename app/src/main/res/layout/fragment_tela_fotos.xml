@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaFotos">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bege"
+        tools:context=".TelaFotos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="409dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/TVResumoF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="13dp"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="RESUMO DE FOTOS"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="164dp"
+                android:layout_height="71dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/raposa_cadernos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="324dp"
+            android:layout_height="444dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/verdeEscuro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.125">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="315dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/TVTituloFotos"
+                    android:layout_width="64dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/sue_ellen_francisco"
+                    android:gravity="right"
+                    android:text="Título:"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="222dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/shape_tela_fotos_um"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/TVTituloFotos"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.653" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="313dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.363"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/TVDataFotos"
+                    android:layout_width="50dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/sue_ellen_francisco"
+                    android:gravity="right"
+                    android:text="Data:"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+                    app:layout_constraintHorizontal_bias="0.533"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.407" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="222dp"
+                    android:layout_height="43dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/shape_tela_fotos_um"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/TVDataFotos"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/BTNDeletar"
+                android:layout_width="148dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/laranjaClaro"
+                android:fontFamily="@font/sue_ellen_francisco"
+                android:text="DELETAR ARQUIVO"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.96"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="93dp"
+                android:layout_height="73dp"
+                android:background="@drawable/shape_tela_fotos_dois"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.138"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BTNDeletar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="319dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="78dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4">
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName5"
+                    android:layout_width="175dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/sue_ellen_francisco"
+                    android:gravity="center"
+                    android:hint="adicione seu arquivo aqui"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#8A8787"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.538" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="104dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="17dp"
+                    android:backgroundTint="@color/laranjaClaro"
+                    android:fontFamily="@font/sue_ellen_francisco"
+                    android:gravity="center"
+                    android:text="SALVAR"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.51" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

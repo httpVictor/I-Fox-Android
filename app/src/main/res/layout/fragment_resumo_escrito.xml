@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resumo_escrito">
+    tools:context=".ResumoEscrito">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_marginStart="4dp"
             android:background="@drawable/shape_logo"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView"

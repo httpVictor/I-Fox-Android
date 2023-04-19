@@ -9,7 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class resumo_escrito extends Fragment {
+public class TelaAudio extends Fragment {
+
+
+
+
 
 
 
@@ -17,6 +21,6 @@ public class resumo_escrito extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_resumo_escrito, container, false);
+        return inflater.inflate(R.layout.fragment_tela_audio, container, false);
     }
 }
