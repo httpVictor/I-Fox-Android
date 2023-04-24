@@ -10,7 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class TelaCadastro extends AppCompatActivity {
 
     //VARIÁVEIS QUE IRÃO RECEBER OS ELEMENTOS DA TELA
@@ -28,6 +38,68 @@ public class TelaCadastro extends AppCompatActivity {
         etNasc = findViewById(R.id.etNascCadastro);
         etEmail = findViewById(R.id.etEmailCadastro);
         etSenha = findViewById(R.id.etSenhaCadastro);
+
+        //Usar a classe do Volley para configurar a requisição
+        RequestQueue requisicao = Volley.newRequestQueue(this);
+        //Caminho do webservice
+        //O localhost irá direcionar para o localhost do Android e não do computador
+        //aonde o webservice estará executando. Para direcionar ao computador usamos
+        //um IP reservado do Android que é o 10.0.2.2
+        String url = "http://10.0.2.2:5000/api/Produto/";
+
+
+        //Cadastrando um usuario
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //criando um objeto de JSON
+                JSONObject produtoJson = new JSONObject();
+
+                try {
+                    //no primeiro parâmetro do método put() usamos o nome do atributo
+                    //igual ao do webservice que espera para receber, após isso passamos o seu valor
+                    produtoJson.put("nome", etUsuario.getText().toString());
+                    produtoJson.put("data de nascimento", etNasc.getText().toString());
+                    produtoJson.put("email", etEmail.getText().toString());
+                    produtoJson.put("senha", etSenha.getText().toString());
+
+                }catch (JSONException exc){
+                    exc.printStackTrace();
+                }
+                JsonObjectRequest cadastrar = new JsonObjectRequest(Request.Method.POST,//Usar o POST na requisição
+                        url, //Caminho do webservice
+                        produtoJson,//o que vai enviar no body
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                if (response.has("mensagem")) {
+                                    Toast.makeText(TelaCadastro.this, "Cadastrado!", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(TelaCadastro.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                //pede para executar a requisição
+                requisicao.add(cadastrar);
+
+                //listar
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,4 +158,5 @@ public class TelaCadastro extends AppCompatActivity {
             }
         });
     }
+
 }

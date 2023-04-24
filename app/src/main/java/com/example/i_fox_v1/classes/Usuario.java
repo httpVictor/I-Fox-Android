@@ -22,6 +22,10 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public Usuario(){
+
+    }
+
     //getters e setters
 
     public String getNome() {
@@ -62,3 +66,4 @@ public class Usuario {
 
 
 }
+
