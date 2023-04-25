@@ -11,8 +11,25 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
+import com.example.i_fox_v1.TelaHomeAluno;
+import com.example.i_fox_v1.classes.Caderno;
+import com.example.i_fox_v1.telas.TelaLogin;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
@@ -26,6 +43,59 @@ public class HomeFragment extends Fragment {
         ImageButton imgBtnClock = view.findViewById(R.id.imgBtnClock);
         ImageButton imgBtnBell = view.findViewById(R.id.imgBtnBell);
         TextView TVCadernoCad = view.findViewById(R.id.TVCadernoCad);
+
+        //ListView listView = findViewById(R.id.listView);
+        List<Caderno> listafinal = new ArrayList();
+
+
+        //Se for usar no emulador, colocar o IP 10.0.2.2
+        //Se for testar no próprio celular, usar localhost
+        String url = "http://localhost:5000/api/Produto";
+
+        //Objeto que fará a requisição ai webservice
+        RequestQueue requisicao = Volley.newRequestQueue(getContext());
+
+        //O método que busca todos os Produto retorna um array
+        JsonArrayRequest lista = new JsonArrayRequest(Request.Method.GET,
+                url,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        //percorrer todos os itens do array
+                        for (int i = 0; i < response.length(); i++) {
+                            //converter cada posição do array para o objeto JSON
+                            try {
+                                JSONObject objeto = response.getJSONObject(i);
+
+                                Caderno caderno = new Caderno(objeto.getString("titulo"),
+                                        objeto.getString("descricao"),
+                                        objeto.getString("icone"),
+                                        objeto.getInt("codigo"));
+                                listafinal.add(caderno);
+
+                            } catch (JSONException exc) {
+                                exc.printStackTrace();
+
+
+                            }
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getContext(), "Erro ao enviar", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
+
+
+
+
+
+
 
 
         btnCriarCad.setOnClickListener(new View.OnClickListener() {

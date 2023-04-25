@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,10 +19,14 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.TelaHomeAluno;
+import com.example.i_fox_v1.classes.Caderno;
 import com.example.i_fox_v1.classes.Usuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TelaLogin extends AppCompatActivity {
 
@@ -94,6 +99,16 @@ public class TelaLogin extends AppCompatActivity {
                         });
                 // pede para executar a requisicao
                 requisicao.add(login);
+
+
+
+
+
+
+
+
+
+
 
                         //CONFIRMAR SE O USUÁRIO EXISTE E SE A SENHA CONDIZ COM A DAQUELE USUÁRIO
 
