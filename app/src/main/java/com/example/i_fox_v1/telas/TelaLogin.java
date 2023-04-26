@@ -44,7 +44,7 @@ public class TelaLogin extends AppCompatActivity {
         btnEntrar = findViewById(R.id.btnEntrar);
         tvCadastrar = findViewById(R.id.tvCadastresse);
         etUsuario = findViewById(R.id.etUsuarioLogin);
-        etUsuario = findViewById(R.id.etSenhaLogin);
+        etSenha = findViewById(R.id.etSenhaLogin);
 
         //Usar a classe do Volley para configurar a requisição
         RequestQueue requisicao = Volley.newRequestQueue(this);
@@ -52,7 +52,7 @@ public class TelaLogin extends AppCompatActivity {
         //O localhost irá direcionar para o localhost do Android e não do computador
         //aonde o webservice estará executando. Para direcionar ao computador usamos
         //um IP reservado do Android que é o 10.0.2.2
-        String url = "http://10.0.2.2:5000/api/Produto/";
+        String url = "http://localhost:5000/api/ServicosAPI/LogarUsuario";
 
 
         //VALIDAÇÕES
@@ -63,7 +63,7 @@ public class TelaLogin extends AppCompatActivity {
                 //CRIANDO OBJETO DE USUÁRIO
                 //criando uma variavel para puxar os textos da tela
                String nomeUsuario = etUsuario.getText().toString();
-               String senhaUsuario = etUsuario.getText().toString();
+               String senhaUsuario = etSenha.getText().toString();
 
                 Usuario usuario = new Usuario(nomeUsuario, senhaUsuario);
 
@@ -74,8 +74,10 @@ public class TelaLogin extends AppCompatActivity {
                     //no primeiro parâmetro do método put() usamos o nome do atributo
                     //igual ao do webservice que espera para receber, após isso passamos o seu valor
 
-                    produtoJson.put("nome", etUsuario.getText().toString());
-                    produtoJson.put("senha", etSenha.getText().toString());
+                    produtoJson.put("nome", nomeUsuario);
+                    produtoJson.put("senha", senhaUsuario);
+                    produtoJson.put("Email", "");
+                    produtoJson.put("Data_nasc", "");
 
                 }catch (JSONException exc){
                     exc.printStackTrace();
@@ -95,27 +97,18 @@ public class TelaLogin extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 Toast.makeText(TelaLogin.this, "Falha no Login", Toast.LENGTH_SHORT).show();
+                                etUsuario.setText(error.getMessage());
                             }
                         });
                 // pede para executar a requisicao
                 requisicao.add(login);
-
-
-
-
-
-
-
-
-
-
 
                         //CONFIRMAR SE O USUÁRIO EXISTE E SE A SENHA CONDIZ COM A DAQUELE USUÁRIO
 
                         //CASO POSITIVO, LOGAR
 
                         //INDO PARA A TELA INICIAL
-                        startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
+                        //startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
                 //CASO NEGATIVO, INFORMAR O ERRO
 
             }
