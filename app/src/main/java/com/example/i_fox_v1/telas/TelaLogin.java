@@ -52,7 +52,7 @@ public class TelaLogin extends AppCompatActivity {
         //O localhost irá direcionar para o localhost do Android e não do computador
         //aonde o webservice estará executando. Para direcionar ao computador usamos
         //um IP reservado do Android que é o 10.0.2.2
-        String url = "http://localhost:5000/api/ServicosAPI/LogarUsuario";
+        String url = "http://localhost:5000/api/Usuario/Logar";
 
 
         //VALIDAÇÕES
@@ -89,7 +89,18 @@ public class TelaLogin extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 if (response.has("mensagem")) {
-                                    Toast.makeText(TelaLogin.this, "Logado", Toast.LENGTH_SHORT).show();
+
+                                    try {
+                                        String status = response.getString("mensagem");
+                                        Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
+                                        if(status == "logado"){
+                                            startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
+
+
+                                        }
+                                    } catch (JSONException e) {
+                                        throw new RuntimeException(e);
+                                    }
                                 }
                             }
                         },
@@ -108,7 +119,6 @@ public class TelaLogin extends AppCompatActivity {
                         //CASO POSITIVO, LOGAR
 
                         //INDO PARA A TELA INICIAL
-                        //startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
                 //CASO NEGATIVO, INFORMAR O ERRO
 
             }

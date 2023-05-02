@@ -45,7 +45,7 @@ public class TelaCadastro extends AppCompatActivity {
         //O localhost irá direcionar para o localhost do Android e não do computador
         //aonde o webservice estará executando. Para direcionar ao computador usamos
         //um IP reservado do Android que é o 10.0.2.2
-        String url = "http://10.0.2.2:5000/api/Produto/";
+        String url = "http://localhost:5000/api/Usuario/Cadastrar";
 
 
         //Cadastrando um usuario
@@ -59,7 +59,7 @@ public class TelaCadastro extends AppCompatActivity {
                     //no primeiro parâmetro do método put() usamos o nome do atributo
                     //igual ao do webservice que espera para receber, após isso passamos o seu valor
                     produtoJson.put("nome", etUsuario.getText().toString());
-                    produtoJson.put("data de nascimento", etNasc.getText().toString());
+                    produtoJson.put("data_nasc", "20050101");
                     produtoJson.put("email", etEmail.getText().toString());
                     produtoJson.put("senha", etSenha.getText().toString());
 
@@ -73,7 +73,14 @@ public class TelaCadastro extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 if (response.has("mensagem")) {
-                                    Toast.makeText(TelaCadastro.this, "Cadastrado!", Toast.LENGTH_SHORT).show();
+                                    String resultado;
+                                    try {
+                                        String status = response.getString("mensagem");
+
+                                        Toast.makeText(TelaCadastro.this, status, Toast.LENGTH_SHORT).show();
+                                    } catch (JSONException e) {
+                                        throw new RuntimeException(e);
+                                    }
                                 }
                             }
                         },
@@ -100,7 +107,7 @@ public class TelaCadastro extends AppCompatActivity {
 
 
 
-
+/*
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,6 +164,9 @@ public class TelaCadastro extends AppCompatActivity {
                 //RETORNANDO POSSÍVEIS ERROS...
             }
         });
+
+
+ */
     }
 
 }
