@@ -93,7 +93,7 @@ public class TelaLogin extends AppCompatActivity {
                                     try {
                                         String status = response.getString("mensagem");
                                         Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
-                                        if(status == "logado"){
+                                        if(status.equals("logado")){
                                             startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
 
 
