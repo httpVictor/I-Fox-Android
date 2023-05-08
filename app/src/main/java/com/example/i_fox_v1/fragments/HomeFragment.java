@@ -4,10 +4,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.TelaHomeAluno;
 import com.example.i_fox_v1.classes.Caderno;
+import com.example.i_fox_v1.listas.AdapterCaderno;
 import com.example.i_fox_v1.telas.TelaLogin;
 
 import org.json.JSONArray;
@@ -42,7 +45,7 @@ public class HomeFragment extends Fragment {
         ImageButton imgBtnMap = view.findViewById(R.id.imgBtnMap);
         ImageButton imgBtnClock = view.findViewById(R.id.imgBtnClock);
         ImageButton imgBtnBell = view.findViewById(R.id.imgBtnBell);
-        TextView TVCadernoCad = view.findViewById(R.id.TVCadernoCad);
+        RecyclerView recyclerView = view.findViewById(R.id.rvCaderno);
 
         //ListView listView = findViewById(R.id.listView);
         List<Caderno> listafinal = new ArrayList();
@@ -50,7 +53,7 @@ public class HomeFragment extends Fragment {
 
         //Se for usar no emulador, colocar o IP 10.0.2.2
         //Se for testar no próprio celular, usar localhost
-        String url = "http://localhost:5000/api/Produto";
+        String url = "http://localhost:5000/api/Caderno/Listar/";
 
         //Objeto que fará a requisição ai webservice
         RequestQueue requisicao = Volley.newRequestQueue(getContext());
@@ -80,6 +83,9 @@ public class HomeFragment extends Fragment {
 
                             }
                         }
+                        AdapterCaderno adapter = new AdapterCaderno(getContext(), listafinal);
+                        //indicar o layout RecyclerView
+                      //  recycler
                     }
                 },
                 new Response.ErrorListener() {

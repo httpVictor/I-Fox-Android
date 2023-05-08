@@ -50,6 +50,7 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
 
     @Override
     public int getItemCount() {
+
         return listaCaderno.size();
     }
 }

@@ -1,5 +1,6 @@
 package com.example.i_fox_v1;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,7 +20,10 @@ public class TelaHomeAluno extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        /*
+        Intent intent = getIntent();
+        intent.getStringExtra("nome");
+        */
         binding = ActivityTelaHomeAlunoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
