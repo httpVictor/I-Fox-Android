@@ -21,6 +21,7 @@ import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.TelaHomeAluno;
 import com.example.i_fox_v1.classes.Caderno;
 import com.example.i_fox_v1.classes.Usuario;
+import com.example.i_fox_v1.fragments.HomeFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -94,10 +95,7 @@ public class TelaLogin extends AppCompatActivity {
                                         String status = response.getString("mensagem");
                                         Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
                                         if(status.equals("logado")){
-                                            Intent intent = new Intent(TelaLogin.this, TelaHomeAluno.class);
-                                            intent.putExtra("nome",nomeUsuario);
-                                            startActivity(intent);
-
+                                            startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
 
                                         }
                                     } catch (JSONException e) {
@@ -116,12 +114,6 @@ public class TelaLogin extends AppCompatActivity {
                 // pede para executar a requisicao
                 requisicao.add(login);
 
-                        //CONFIRMAR SE O USUÁRIO EXISTE E SE A SENHA CONDIZ COM A DAQUELE USUÁRIO
-
-                        //CASO POSITIVO, LOGAR
-
-                        //INDO PARA A TELA INICIAL
-                //CASO NEGATIVO, INFORMAR O ERRO
 
             }
         });

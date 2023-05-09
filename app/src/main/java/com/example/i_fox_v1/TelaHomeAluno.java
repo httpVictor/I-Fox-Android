@@ -14,16 +14,11 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.i_fox_v1.databinding.ActivityTelaHomeAlunoBinding;
 
 public class TelaHomeAluno extends AppCompatActivity {
-
     private ActivityTelaHomeAlunoBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*
-        Intent intent = getIntent();
-        intent.getStringExtra("nome");
-        */
         binding = ActivityTelaHomeAlunoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

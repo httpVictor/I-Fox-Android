@@ -76,8 +76,8 @@ public class TelaCadastro extends AppCompatActivity {
                                     String resultado;
                                     try {
                                         String status = response.getString("mensagem");
-
                                         Toast.makeText(TelaCadastro.this, status, Toast.LENGTH_SHORT).show();
+
                                     } catch (JSONException e) {
                                         throw new RuntimeException(e);
                                     }
@@ -92,8 +92,6 @@ public class TelaCadastro extends AppCompatActivity {
                         });
                 //pede para executar a requisição
                 requisicao.add(cadastrar);
-
-                //listar
 
             }
         });

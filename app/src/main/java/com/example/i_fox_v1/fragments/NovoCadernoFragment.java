@@ -23,6 +23,7 @@ public class NovoCadernoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_novo_caderno, container, false);
         btnSalvar = view.findViewById(R.id.btnSalvarCaderno);
         EditText etTituloNovoCad = view.findViewById(R.id.etTituloNovoCad);
+
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

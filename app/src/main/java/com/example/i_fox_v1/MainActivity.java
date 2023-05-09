@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Se tiver algo salvo no shared preferences passar direto para tela inicial
+
+                //Se não passar para a de login
                 startActivity(new Intent(MainActivity.this , TelaLogin.class));
             }
         });
