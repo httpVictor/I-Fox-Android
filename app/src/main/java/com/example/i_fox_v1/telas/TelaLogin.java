@@ -95,6 +95,8 @@ public class TelaLogin extends AppCompatActivity {
                                         String status = response.getString("mensagem");
                                         Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
                                         if(status.equals("logado")){
+                                            //Salava as infos
+
                                             startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
 
                                         }

@@ -1,5 +1,6 @@
 package com.example.i_fox_v1.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
