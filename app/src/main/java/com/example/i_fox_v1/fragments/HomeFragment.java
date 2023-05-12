@@ -1,6 +1,7 @@
 package com.example.i_fox_v1.fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -49,8 +50,18 @@ public class HomeFragment extends Fragment {
         ImageButton imgBtnBell = view.findViewById(R.id.imgBtnBell);
         RecyclerView recyclerView = view.findViewById(R.id.rvCaderno);
 
+            //Lendo o arquivo shared preference
 
-        //ListView listView = findViewById(R.id.listView);
+
+           // SharedPreferences ler = getSharedPreferences("usuarioLogado", MODE_PRIVATE);
+            //Ao ler um valor, é necessário indicar o nome do campo e um valor padrão
+            //O valor padrão serve para não ficar nulo em caso de não encontrar o campo
+            //String usuarioCad = ler.getString("usuario", "");
+           // String senhaCad = ler.getString("senha", "");
+
+
+
+            //ListView listView = findViewById(R.id.listView);
         List<Caderno> listafinal = new ArrayList();
 
         //Se for usar no emulador, colocar o IP 10.0.2.2

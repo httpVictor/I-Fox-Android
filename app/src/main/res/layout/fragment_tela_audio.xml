@@ -229,7 +229,7 @@
                     android:layout_height="57dp"
                     android:layout_marginEnd="44dp"
                     android:backgroundTint="@color/laranjaClaro"
-                    android:drawableTop="@drawable/microfone"
+                    android:drawableTop="@drawable/microfone_3"
                     android:foregroundGravity="center"
                     android:gravity="center"
                     app:cornerRadius="80dp"

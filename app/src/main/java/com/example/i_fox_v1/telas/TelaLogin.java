@@ -3,6 +3,7 @@ package com.example.i_fox_v1.telas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -96,7 +97,19 @@ public class TelaLogin extends AppCompatActivity {
                                         Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
                                         if(status.equals("logado")){
                                             //Salava as infos
-
+                                            //m é preciso de um nome para o arquivo e o modo de operação
+                                            SharedPreferences.Editor gravar = getSharedPreferences(
+                                                    "usuarioLogado", //nome do arquivo XML a ser criado
+                                                    MODE_PRIVATE).edit(); //PRIVATE -> não será compartilhado
+                                            //Informar um nome de campo (chave) e o valor associado a ele
+                                            gravar.putString("usuario", nomeUsuario);
+                                            gravar.putString("senha", senhaUsuario);
+                                            //Para gravar é necessário chamar o método apply() ou commit()
+                                            //a diferença é que o commit retorna boolean e podemos testar
+                                            if(gravar.commit()) {
+                                                Toast.makeText(TelaLogin.this, "Logado!",
+                                                        Toast.LENGTH_LONG).show();
+                                            }
                                             startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
 
                                         }

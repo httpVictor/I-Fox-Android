@@ -11,12 +11,6 @@ import android.view.ViewGroup;
 
 public class TelaAudio extends Fragment {
 
-
-
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

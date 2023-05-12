@@ -11,34 +11,125 @@
         android:layout_height="match_parent"
         android:background="@color/bege">
 
+        <TextView
+            android:id="@+id/tvResumos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/sue_ellen_francisco"
+            android:text="SEUS RESUMOS"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/constraintLayout12"
+            android:layout_width="187dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/shaperesumos"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/tvResumos">
 
-            <ImageView
-                android:id="@+id/imageView4"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:src="@drawable/raposa_cadernos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout13"
+            android:layout_width="35dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/shape_resumo_escrito"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="132dp">
+
+            <ImageButton
+                android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/raposa_icon"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView18"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout14"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/shape_resumo_escrito"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout13"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/aclonica"
-                android:text="@string/titulo_projeto"
-                android:textColor="@color/black"
-                android:textSize="34sp"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/microfone_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout15"
+            android:layout_width="34dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/shape_resumo_escrito"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout14"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/flash_card_icone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_resumo_escrito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+            tools:layout_editor_absoluteY="131dp">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/resumoescrito"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
