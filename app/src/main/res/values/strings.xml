@@ -90,4 +90,16 @@
     <string name="textData">Data</string>
     <string name="textAnotacoes">Anotações</string>
     <string name="btSalvar">SALVAR</string>
+
+    //REFERENCIAS DA TELA DE CONFIGURAÇÕES
+
+    <string name="configuracao">Configurações</string>
+    <string name="botao_deslogar">DESLOGAR DA SUA CONTA</string>
+    <string name="criadores">Criadores</string>
+    <string name="nome1">Gabriele Moura</string>
+    <string name="nome2">Victor Nepomuceno</string>
+    <string name="nome3"> Kevin Caldas</string>
+    <string name="nome4"> Nicolli Franchini</string>
+    <string name="idade1">17 anos</string>
+    <string name="fim">TCC - I FOX</string>
 </resources>
