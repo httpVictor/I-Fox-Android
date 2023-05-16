@@ -11,14 +11,13 @@ import com.example.i_fox_v1.R;
 
 public class ViewHolderCaderno extends RecyclerView.ViewHolder {
 
-    TextView tvNomeCaderno, tvQntCaderno;
+    TextView tvNomeCaderno;
     ImageButton ibExcluirCaderno;
 
     public ViewHolderCaderno(@NonNull View itemView) {
         super(itemView);
 
         tvNomeCaderno = itemView.findViewById(R.id.tvNomeCaderno);
-        tvQntCaderno = itemView.findViewById(R.id.tvQntCaderno);
         ibExcluirCaderno = itemView.findViewById(R.id.ibExcluirCaderno);
 
     }

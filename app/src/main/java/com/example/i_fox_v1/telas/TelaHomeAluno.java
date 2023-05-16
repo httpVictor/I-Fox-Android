@@ -1,8 +1,11 @@
-package com.example.i_fox_v1;
+package com.example.i_fox_v1.telas;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.example.i_fox_v1.R;
+import com.example.i_fox_v1.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ import com.example.i_fox_v1.databinding.ActivityTelaHomeAlunoBinding;
 
 public class TelaHomeAluno extends AppCompatActivity {
     private ActivityTelaHomeAlunoBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

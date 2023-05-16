@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,16 +18,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
-import com.example.i_fox_v1.TelaHomeAluno;
-import com.example.i_fox_v1.classes.Caderno;
 import com.example.i_fox_v1.classes.Usuario;
-import com.example.i_fox_v1.fragments.HomeFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TelaLogin extends AppCompatActivity {
 
@@ -122,10 +115,17 @@ public class TelaLogin extends AppCompatActivity {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(TelaLogin.this, "Falha no Login", Toast.LENGTH_SHORT).show();
-                                etUsuario.setText(error.getMessage());
+                                //Usuário teste sem o webservice
+                                if(nomeUsuario == "vii" && senhaUsuario =="1234"){
+                                    startActivity(new Intent(TelaLogin.this, TelaHomeAluno.class));
+                                }else{
+                                    Toast.makeText(TelaLogin.this, "Falha no Login", Toast.LENGTH_SHORT).show();
+                                    etUsuario.setText(error.getMessage());
+                                }
+
                             }
                         });
+
                 // pede para executar a requisicao
                 requisicao.add(login);
 

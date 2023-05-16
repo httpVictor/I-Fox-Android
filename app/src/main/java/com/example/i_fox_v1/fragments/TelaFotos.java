@@ -1,4 +1,4 @@
-package com.example.i_fox_v1;
+package com.example.i_fox_v1.fragments;
 
 import android.os.Bundle;
 
@@ -8,13 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.i_fox_v1.R;
 
-public class TelaPomodoro extends Fragment {
+
+public class TelaFotos extends Fragment {
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tela_pomodoro, container, false);
+        return inflater.inflate(R.layout.fragment_tela_fotos, container, false);
+
     }
 }

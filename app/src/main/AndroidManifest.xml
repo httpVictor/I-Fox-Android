@@ -15,7 +15,7 @@
         android:theme="@style/Theme.IFOXV1"
         tools:targetApi="31">
         <activity
-            android:name=".TelaHomeAluno"
+            android:name=".telas.TelaHomeAluno"
             android:exported="false"
             android:label="@string/title_activity_tela_home_aluno" />
         <activity

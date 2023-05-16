@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
@@ -47,7 +48,6 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
         //junta o XML com o Adapter.
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_caderno,parent,false);
 
-
         return new ViewHolderCaderno(layout);
     }
 
@@ -55,7 +55,6 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
     public void onBindViewHolder(@NonNull ViewHolderCaderno holder, @SuppressLint("RecyclerView") int position) {
 
         holder.tvNomeCaderno.setText(listaCaderno.get(position).getTitulo());
-        holder.tvQntCaderno.setText("Quantidade: " + listaCaderno.get(position).getDescricao());
         holder.ibExcluirCaderno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,6 +101,14 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
                 });
                 //exibir o alert
                 configAlert.create().show();
+            }
+        });
+
+        //Evento para passar para outro fragment
+        holder.tvNomeCaderno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
             }
         });
     }

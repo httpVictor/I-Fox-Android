@@ -15,6 +15,13 @@
             app:destination="@id/nav_CriarCaderno"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/fraghome_to_fragResumo"
+            app:destination="@id/novoResumoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@animator/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/nav_lembretes"
@@ -47,5 +54,29 @@
         android:name="com.example.i_fox_v1.fragments.LojaFragment"
         android:label="fragment_loja"
         tools:layout="@layout/fragment_loja" />
+    <fragment
+        android:id="@+id/novoResumoFragment"
+        android:name="com.example.i_fox_v1.fragments.NovoResumoFragment"
+        android:label="fragment_novo_resumo"
+        tools:layout="@layout/fragment_novo_resumo" >
+        <action
+            android:id="@+id/resumo_to_escrito"
+            app:destination="@id/resumoEscrito" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumoEscrito"
+        android:name="com.example.i_fox_v1.fragments.ResumoEscrito"
+        android:label="fragment_resumo_escrito"
+        tools:layout="@layout/fragment_resumo_escrito" />
+    <fragment
+        android:id="@+id/telaFotos"
+        android:name="com.example.i_fox_v1.fragments.TelaFotos"
+        android:label="fragment_tela_fotos"
+        tools:layout="@layout/fragment_tela_fotos" />
+    <fragment
+        android:id="@+id/telaAudio"
+        android:name="com.example.i_fox_v1.fragments.TelaAudio"
+        android:label="fragment_tela_audio"
+        tools:layout="@layout/fragment_tela_audio" />
 
 </navigation>

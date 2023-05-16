@@ -47,7 +47,6 @@ public class TelaCadastro extends AppCompatActivity {
         //um IP reservado do Android que é o 10.0.2.2
         String url = "http://localhost:5000/api/Usuario/Cadastrar";
 
-
         //Cadastrando um usuario
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,15 +94,6 @@ public class TelaCadastro extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
-
 
 /*
         btnCadastrar.setOnClickListener(new View.OnClickListener() {

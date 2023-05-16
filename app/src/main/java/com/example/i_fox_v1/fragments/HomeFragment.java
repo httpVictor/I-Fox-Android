@@ -1,6 +1,6 @@
 package com.example.i_fox_v1.fragments;
 
-import android.content.Intent;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -25,10 +24,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
-import com.example.i_fox_v1.TelaHomeAluno;
 import com.example.i_fox_v1.classes.Caderno;
 import com.example.i_fox_v1.listas.AdapterCaderno;
-import com.example.i_fox_v1.telas.TelaLogin;
+import com.example.i_fox_v1.telas.TelaHomeAluno;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,19 +47,19 @@ public class HomeFragment extends Fragment {
         ImageButton imgBtnClock = view.findViewById(R.id.imgBtnClock);
         ImageButton imgBtnBell = view.findViewById(R.id.imgBtnBell);
         RecyclerView recyclerView = view.findViewById(R.id.rvCaderno);
+        TextView txtTestes = view.findViewById(R.id.textView2);
 
-            //Lendo o arquivo shared preference
+        //Lendo o arquivo shared preference
+        SharedPreferences ler = this.getActivity().getSharedPreferences("usuarioLogado", Context.MODE_PRIVATE);
 
+        //Ao ler um valor, é necessário indicar o nome do campo e um valor padrão
+        //O valor padrão serve para não ficar nulo em caso de não encontrar o campo
+        String usuarioCad = ler.getString("usuario", "");
+        String senhaCad = ler.getString("senha", "");
 
-           // SharedPreferences ler = getSharedPreferences("usuarioLogado", MODE_PRIVATE);
-            //Ao ler um valor, é necessário indicar o nome do campo e um valor padrão
-            //O valor padrão serve para não ficar nulo em caso de não encontrar o campo
-            //String usuarioCad = ler.getString("usuario", "");
-           // String senhaCad = ler.getString("senha", "");
+        //txtTestes.setText(usuarioCad);
 
-
-
-            //ListView listView = findViewById(R.id.listView);
+        //ListView listView = findViewById(R.id.listView);
         List<Caderno> listafinal = new ArrayList();
 
         //Se for usar no emulador, colocar o IP 10.0.2.2
@@ -74,7 +72,7 @@ public class HomeFragment extends Fragment {
 
         //O método que busca todos os Produto retorna um array
         JsonArrayRequest lista = new JsonArrayRequest(Request.Method.GET,
-                url + "?nomeUsuario=victor",
+                url + "?nomeUsuario=" + usuarioCad,
                 null,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -113,8 +111,6 @@ public class HomeFragment extends Fragment {
         requisicao.add(lista);
 
 
-        /*
-
         btnCriarCad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,7 +118,7 @@ public class HomeFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.home_to_criarCad);
             }
         });
-        */
+
        return view;
     }
 }
