@@ -112,7 +112,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textTexto">
 
             <EditText
-                android:id="@+id/editTextUsuario"
+                android:id="@+id/etUsuario"
                 android:layout_width="249dp"
                 android:layout_height="36dp"
                 android:layout_marginEnd="28dp"
@@ -135,7 +135,7 @@
                 android:text="@string/textUsuario"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/editTextUsuario"
+                app:layout_constraintEnd_toStartOf="@+id/etUsuario"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -161,14 +161,14 @@
                 android:text="@string/textSenha"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/editTextSenha"
+                app:layout_constraintEnd_toStartOf="@+id/etSenha"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.71" />
 
             <EditText
-                android:id="@+id/editTextSenha"
+                android:id="@+id/etSenha"
                 android:layout_width="249dp"
                 android:layout_height="36dp"
                 android:background="@drawable/shape_perfil_parte_dois"
@@ -201,14 +201,14 @@
                 android:text="@string/textEmail"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/editTextEmail"
+                app:layout_constraintEnd_toStartOf="@+id/etEmail"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.733" />
 
             <EditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/etEmail"
                 android:layout_width="249dp"
                 android:layout_height="36dp"
                 android:layout_marginEnd="4dp"

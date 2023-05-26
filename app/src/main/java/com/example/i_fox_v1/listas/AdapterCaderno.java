@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.classes.Caderno;
+import com.example.i_fox_v1.telas.TelaLogin;
 
 import org.json.JSONObject;
 
@@ -108,7 +110,7 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
         holder.tvNomeCaderno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
+                    Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
             }
         });
     }
