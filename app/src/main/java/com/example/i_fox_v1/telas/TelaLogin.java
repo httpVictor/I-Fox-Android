@@ -129,7 +129,6 @@ public class TelaLogin extends AppCompatActivity {
                 // pede para executar a requisicao
                 requisicao.add(login);
 
-
             }
         });
 
