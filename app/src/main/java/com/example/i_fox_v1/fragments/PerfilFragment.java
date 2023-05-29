@@ -99,11 +99,12 @@ public class PerfilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //Converter os dados do Produto que foram digitados na tela, para JSON
-                JSONObject dadosProduto = new JSONObject();
+                JSONObject dadosUsuario = new JSONObject();
                 try {
-                    dadosProduto.put("nome", etUsuario.getText().toString());
-                    dadosProduto.put("senha", etSenha.getText().toString());
-                    dadosProduto.put("email", etEmail.getText().toString());
+                    dadosUsuario.put("nome", etUsuario.getText().toString());
+                    dadosUsuario.put("email", etEmail.getText().toString());
+                    dadosUsuario.put("senha", etSenha.getText().toString());
+
                 } catch (JSONException exc) {
                     exc.printStackTrace();
                 }
@@ -112,13 +113,19 @@ public class PerfilFragment extends Fragment {
                 JsonObjectRequest cadastrar = new JsonObjectRequest(
                         Request.Method.PUT, //Método que será usado
                         url, //Caminho do webservice,
-                        dadosProduto, //Dados do produto no formato JSON
+                        dadosUsuario, //Dados do produto no formato JSON
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 if (response.has("mensagem")) {
-                                    Toast.makeText(getContext(),
-                                            "Atualizado", Toast.LENGTH_SHORT).show();
+                                    try {
+                                        String resposta = response.getString("mensagem");
+                                        Toast.makeText(getContext(),
+                                                resposta, Toast.LENGTH_SHORT).show();
+                                    } catch (JSONException e) {
+                                        throw new RuntimeException(e);
+                                    }
+
                                 }
                             }
                         },

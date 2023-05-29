@@ -89,7 +89,7 @@ public class TelaLogin extends AppCompatActivity {
                                         String status = response.getString("mensagem");
                                         Toast.makeText(TelaLogin.this, status, Toast.LENGTH_SHORT).show();
                                         if(status.equals("logado")){
-                                            //Salava as infos
+                                            //Salva as infos
                                             //m é preciso de um nome para o arquivo e o modo de operação
                                             SharedPreferences.Editor gravar = getSharedPreferences(
                                                     "usuarioLogado", //nome do arquivo XML a ser criado
