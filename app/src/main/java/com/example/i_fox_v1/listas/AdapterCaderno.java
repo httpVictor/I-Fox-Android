@@ -72,10 +72,10 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
                 configAlert.setPositiveButton("SIM!", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        String url = "http://localhost:5000/api/Resumo";
+                        String url = "http://localhost:5000/api/Caderno";
                         RequestQueue requisicao = Volley.newRequestQueue(context);
                         JsonObjectRequest apagar = new JsonObjectRequest(Request.Method.DELETE,
-                                url + "?id=" + listaCaderno.get(position).getCodigo(), null,
+                                url + "?id_caderno=" + listaCaderno.get(position).getCodigo(), null,
                                 //sem nada no body
                                 new Response.Listener<JSONObject>() {
                                     @Override
@@ -110,6 +110,7 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
         holder.tvNomeCaderno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                    int cod = listaCaderno.get(position).getCodigo();
                     Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
             }
         });

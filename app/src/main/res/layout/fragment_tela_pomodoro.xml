@@ -204,7 +204,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnDeslogar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verdeClaro"
@@ -229,8 +229,8 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/button"
-                app:layout_constraintStart_toStartOf="@+id/button" />
+                app:layout_constraintEnd_toEndOf="@+id/btnDeslogar"
+                app:layout_constraintStart_toStartOf="@+id/btnDeslogar" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

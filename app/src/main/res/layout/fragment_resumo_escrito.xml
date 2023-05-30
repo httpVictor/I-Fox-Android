@@ -182,7 +182,7 @@
                 tools:layout_editor_absoluteY="167dp" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+                android:id="@+id/cvResumoEscrito"
                 android:layout_width="277dp"
                 android:layout_height="100dp"
                 tools:layout_editor_absoluteX="54dp"
