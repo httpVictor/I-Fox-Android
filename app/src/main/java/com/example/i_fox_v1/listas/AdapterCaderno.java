@@ -110,6 +110,7 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
         holder.tvNomeCaderno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                    //passar o código do caderno para pegar na tela de resumos
                     int cod = listaCaderno.get(position).getCodigo();
                     Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
             }

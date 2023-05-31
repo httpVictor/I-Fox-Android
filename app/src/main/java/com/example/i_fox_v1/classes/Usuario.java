@@ -65,5 +65,19 @@ public class Usuario {
     }
 
 
+
+    //Métodos para validações
+    public boolean validaNome(){
+        return true;
+    }
+
+    public boolean validaSenha(){
+        return true;
+    }
+
+    public boolean validaData(){
+        return true;
+    }
+
 }
 

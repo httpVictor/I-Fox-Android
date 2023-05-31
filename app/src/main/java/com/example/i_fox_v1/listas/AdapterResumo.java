@@ -47,8 +47,6 @@ public class AdapterResumo extends RecyclerView.Adapter<ViewHolderResumo> {
     public ViewHolderResumo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //junta o XML com o Adapter.
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_resumo,parent,false);
-
-
         return new ViewHolderResumo(layout);
     }
 
@@ -59,13 +57,6 @@ public class AdapterResumo extends RecyclerView.Adapter<ViewHolderResumo> {
         holder.tvNomeResumo.setText(listaResumo.get(position).getTitulo());
 
         //botão para entrar no resumo
-        holder.ibCabecalho.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-            }
-        });
 
         //botao para excluir o resumo
         holder.ibExcluirResumo.setOnClickListener(new View.OnClickListener() {
@@ -117,10 +108,6 @@ public class AdapterResumo extends RecyclerView.Adapter<ViewHolderResumo> {
             }
         });
     }
-
-
-
-
 
 
     @Override

@@ -57,7 +57,6 @@ public class HomeFragment extends Fragment {
         String usuarioCad = ler.getString("usuario", "");
         String senhaCad = ler.getString("senha", "");
 
-        //txtTestes.setText(usuarioCad);
 
         //ListView listView = findViewById(R.id.listView);
         List<Caderno> listafinal = new ArrayList();

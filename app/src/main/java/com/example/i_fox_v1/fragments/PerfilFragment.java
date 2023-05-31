@@ -50,16 +50,7 @@ public class PerfilFragment extends Fragment {
         //Ao ler um valor, é necessário indicar o nome do campo e um valor padrão
         //O valor padrão serve para não ficar nulo em caso de não encontrar o campo
         String usuarioCad = ler.getString("usuario", "");
-        String senhaCad = ler.getString("senha", "");
         //Verificar se a senha e usuário são válidos
-
-        //lendo infos do banco
-        //No caso da busca com o ID, o retorno do webservice é um Array
-        //Se o Array estiver vazio, então nã há um produto cadastrado com o código
-        //caso contrário, foi possível encontrar um produto com aquele código
-        //No caso da busca com o ID, o retorno do webservice é um Array
-        //Se o Array estiver vazio, então nã há um produto cadastrado com o código
-        //caso contrário, foi possível encontrar um produto com aquele código
 
         JsonObjectRequest busca = new JsonObjectRequest(
                 Request.Method.GET,
@@ -68,13 +59,13 @@ public class PerfilFragment extends Fragment {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        //Se há um objeto dentro do Array...
                         try {
                             //Colocar os valores dentro da tela
                             tvNome.setText(("Olá " + response.getString("nome")));
                             etUsuario.setText(response.getString("nome"));
                             etEmail.setText(response.getString("email") + "");
                             etSenha.setText(response.getString("senha") + "");
+
                         } catch (JSONException exc) {
                             exc.printStackTrace();
                             Toast.makeText(getContext(),
@@ -93,7 +84,6 @@ public class PerfilFragment extends Fragment {
         );
         requisicao.add(busca); //Envia para o webservice
 
-
         //Requisição para atualizar os dados
         btnAtualizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +94,7 @@ public class PerfilFragment extends Fragment {
                     dadosUsuario.put("nome", etUsuario.getText().toString());
                     dadosUsuario.put("email", etEmail.getText().toString());
                     dadosUsuario.put("senha", etSenha.getText().toString());
+                    dadosUsuario.put("Data_nasc", "00000000");
 
                 } catch (JSONException exc) {
                     exc.printStackTrace();
