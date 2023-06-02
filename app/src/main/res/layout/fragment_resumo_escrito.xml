@@ -184,8 +184,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResumoEscrito"
-                android:layout_width="277dp"
-                android:layout_height="200dp"
+                android:layout_width="330dp"
+                android:layout_height="268dp"
                 android:background="#F1F1F1"
                 android:backgroundTint="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -197,28 +197,15 @@
                     android:id="@+id/etResumo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="#00ECECEC"
                     android:ems="10"
                     android:gravity="start|top"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <Button
-            android:id="@+id/btSalvar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:backgroundTint="#D9653B"
-            android:fontFamily="@font/sue_ellen_francisco"
-            android:text="@string/btSalvar"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

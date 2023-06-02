@@ -230,10 +230,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Button"
+            android:shadowColor="#120C0C"
+            android:text="Atualizar"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textColorLink="#070404"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11"
+            app:rippleColor="#120A0A"
+            app:strokeColor="#271717" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

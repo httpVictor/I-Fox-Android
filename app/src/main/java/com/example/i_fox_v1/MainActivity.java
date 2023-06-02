@@ -12,11 +12,21 @@ import android.widget.TextView;
 import com.example.i_fox_v1.R;
 import com.example.i_fox_v1.telas.TelaLogin;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     //VARIÁVEIS QUE IRÃO RECEBER OS ELEMENTOS DA TELA
     private Button btnContinuar;
     private TextView tvFrases;
+    String[] frases = {"Não é necessário mudar por ninguém além de si.",
+            "Não tema a morte, e sim a vida não vivida. Você não precisa viver para sempre, só precisa viver.",
+            "A responsabilidade da nossa felicidade é apenas nossa.",
+            "Todos temos a energia que precisamos, basta querer.",
+            "E no final do dia, somos um dia mais forte."};
+
+    Random random = new Random();
+    int numAleatorio = random.nextInt(4);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnContinuar = findViewById(R.id.btnContinuar);
         tvFrases = findViewById(R.id.tvFrases);
 
+        tvFrases.setText(frases[numAleatorio]);
         //EVENTO PARA A TRANSIÇÃO DE ACTIVITY PARA O LOGIN
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override

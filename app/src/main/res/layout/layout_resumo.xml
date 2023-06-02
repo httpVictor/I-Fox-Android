@@ -12,8 +12,6 @@
         android:layout_width="309dp"
         android:layout_height="215dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cabecalho_resumo" />
