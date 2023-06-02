@@ -7,11 +7,6 @@
         android:title="@string/menu_perfil" />
 
     <item
-        android:id="@+id/nav_lembretes"
-        android:icon="@drawable/icon_lembretes"
-        android:title="@string/menu_lembretes" />
-
-    <item
         android:id="@+id/nav_home"
         android:icon="@drawable/icon_home"
         android:title="@string/menu_home" />
@@ -20,10 +15,5 @@
         android:id="@+id/nav_feed"
         android:icon="@drawable/icon_teste"
         android:title="@string/menu_feed" />
-
-    <item
-        android:id="@+id/nav_loja"
-        android:icon="@drawable/icon_loja"
-        android:title="@string/menu_loja" />
 
 </menu>

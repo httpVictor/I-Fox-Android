@@ -4,12 +4,14 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
@@ -57,6 +59,33 @@ public class AdapterResumo extends RecyclerView.Adapter<ViewHolderResumo> {
         holder.tvNomeResumo.setText(listaResumo.get(position).getTitulo());
 
         //botão para entrar no resumo
+        holder.ibCabecalho.setOnClickListener(new View.OnClickListener() {
+            //pegando o código e tipo do resumo
+            int cod = listaResumo.get(position).getCodigo();
+            String tipo = listaResumo.get(position).getTipo();
+            @Override
+            public void onClick(View view) {
+                //se for escrito...
+                if(tipo.equalsIgnoreCase("Escrito")){
+                    //salvando o código do resumo
+                    //m é preciso de um nome para o arquivo e o modo de operação
+                    SharedPreferences.Editor gravar = view.getContext().getSharedPreferences(
+                            "resumoAcessado", //nome do arquivo XML a ser criado
+                            Context.MODE_PRIVATE).edit(); //PRIVATE -> não será compartilhado
+                    //Informar um nome de campo (chave) e o valor associado a ele
+                    gravar.putInt("codigo", cod);
+
+                    //a diferença é que o commit retorna boolean e podemos testar
+                    if(gravar.commit()) {
+                        //exibe a tela
+                        Navigation.findNavController(view).navigate(R.id.resumo_to_escrito);
+                    }
+                }else {
+                    Toast.makeText(context, "Resumos disponíveis apenas na próxima versão!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
         //botao para excluir o resumo
         holder.ibExcluirResumo.setOnClickListener(new View.OnClickListener() {

@@ -93,7 +93,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="383dp"
-            android:layout_height="359dp"
+            android:layout_height="500dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/shape_resumo_escrito"
             app:layout_constraintEnd_toEndOf="parent"
@@ -185,15 +185,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResumoEscrito"
                 android:layout_width="277dp"
-                android:layout_height="100dp"
+                android:layout_height="200dp"
                 android:background="#F1F1F1"
                 android:backgroundTint="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.566"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textAnotacoes"
-                app:layout_constraintVertical_bias="0.175" />
+                app:layout_constraintTop_toBottomOf="@+id/textAnotacoes">
+
+                <EditText
+                    android:id="@+id/etResumo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

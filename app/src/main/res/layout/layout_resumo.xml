@@ -20,15 +20,15 @@
 
     <TextView
         android:id="@+id/tvNomeResumo"
-        android:layout_width="51dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginEnd="123dp"
         android:fontFamily="@font/sue_ellen_francisco"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="#050303"
-        android:textSize="20sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@+id/ibCabecalho"
         app:layout_constraintStart_toStartOf="@+id/ibCabecalho"
         app:layout_constraintTop_toBottomOf="@+id/ibCabecalho" />
@@ -48,4 +48,5 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNomeResumo"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/btnexcluir" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

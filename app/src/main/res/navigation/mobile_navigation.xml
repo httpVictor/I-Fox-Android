@@ -24,11 +24,6 @@
             app:popExitAnim="@animator/nav_default_exit_anim" />
     </fragment>
     <fragment
-        android:id="@+id/nav_lembretes"
-        android:name="com.example.i_fox_v1.fragments.LembretesFragment"
-        android:label="fragment_lembretes"
-        tools:layout="@layout/fragment_lembretes" />
-    <fragment
         android:id="@+id/nav_perfil"
         android:name="com.example.i_fox_v1.fragments.PerfilFragment"
         android:label="fragment_perfil"
@@ -49,11 +44,6 @@
         android:name="com.example.i_fox_v1.fragments.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" />
-    <fragment
-        android:id="@+id/nav_loja"
-        android:name="com.example.i_fox_v1.fragments.LojaFragment"
-        android:label="fragment_loja"
-        tools:layout="@layout/fragment_loja" />
     <fragment
         android:id="@+id/novoResumoFragment"
         android:name="com.example.i_fox_v1.fragments.NovoResumoFragment"

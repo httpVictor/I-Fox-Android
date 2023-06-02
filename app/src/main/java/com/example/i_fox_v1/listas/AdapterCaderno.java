@@ -112,7 +112,23 @@ public class AdapterCaderno extends RecyclerView.Adapter<ViewHolderCaderno> {
             public void onClick(View view) {
                     //passar o código do caderno para pegar na tela de resumos
                     int cod = listaCaderno.get(position).getCodigo();
-                    Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
+                    try {
+                        //Salva as infos
+                        //m é preciso de um nome para o arquivo e o modo de operação
+                        SharedPreferences.Editor gravar = view.getContext().getSharedPreferences(
+                                "cadernoAcessado", //nome do arquivo XML a ser criado
+                                Context.MODE_PRIVATE).edit(); //PRIVATE -> não será compartilhado
+                        //Informar um nome de campo (chave) e o valor associado a ele
+                        gravar.putInt("codigo", cod);
+
+                        //a diferença é que o commit retorna boolean e podemos testar
+                        if(gravar.commit()) {
+                            Navigation.findNavController(view).navigate(R.id.fraghome_to_fragResumo);
+                        }
+                    }catch (Exception e){
+
+                    }
+
             }
         });
     }

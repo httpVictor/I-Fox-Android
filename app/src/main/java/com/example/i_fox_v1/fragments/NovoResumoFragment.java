@@ -1,5 +1,7 @@
 package com.example.i_fox_v1.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -56,9 +58,16 @@ public class NovoResumoFragment extends Fragment {
         //Objeto que fará a requisição ai webservice
         RequestQueue requisicao = Volley.newRequestQueue(getContext());
 
+        //Lendo o caderno acessado
+        SharedPreferences ler = this.getActivity().getSharedPreferences("cadernoAcessado", Context.MODE_PRIVATE);
+
+        //Ao ler um valor, é necessário indicar o nome do campo e um valor padrão
+        //O valor padrão serve para não ficar nulo em caso de não encontrar o campo
+        int codCaderno = ler.getInt("codigo", 0);
+
         //O método que busca todos os Produto retorna um array
         JsonArrayRequest lista = new JsonArrayRequest(Request.Method.GET,
-                url + "?nomeUsuario=" + 38,
+                url + "/ListarResumos?nomeUsuario=" + codCaderno,
                 null,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -71,8 +80,8 @@ public class NovoResumoFragment extends Fragment {
 
                                 Resumo resumo = new Resumo(objeto.getInt("codigo"),
                                         objeto.getInt("caderno"),
-                                        objeto.getString("titulo"),
                                         objeto.getString("tipo"),
+                                        objeto.getString("titulo"),
                                         objeto.getString("data_resumo")
                                         );
                                 listafinal.add(resumo);
@@ -86,9 +95,6 @@ public class NovoResumoFragment extends Fragment {
                         //indicar o layout RecyclerView
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                         recyclerView.setAdapter(adapter);
-
-                        Toast.makeText(getContext(), response.length() + "", Toast.LENGTH_SHORT).show();
-
                     }
                 },
                 new Response.ErrorListener() {

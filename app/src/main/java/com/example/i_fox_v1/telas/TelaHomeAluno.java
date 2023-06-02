@@ -29,7 +29,7 @@ public class TelaHomeAluno extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_perfil, R.id.nav_home, R.id.nav_lembretes, R.id.nav_feed, R.id.nav_loja).build();
+                R.id.nav_perfil, R.id.nav_home, R.id.nav_feed).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_tela_home_aluno);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
