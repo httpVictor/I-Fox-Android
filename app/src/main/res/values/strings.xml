@@ -102,4 +102,23 @@
     <string name="nome4"> Nicolli Franchini</string>
     <string name="idade1">17 anos</string>
     <string name="fim">TCC - I FOX</string>
+
+
+    //nomes
+    <string name="txtTitulo">FEED DE DICAS</string>
+    <string name="txtNome1">.@Isabel_16</string>
+    <string name="txtNome2">.@Http_Gil</string>
+    <string name="txtNome3">.@Bebel</string>
+    <string name="txtNome4">.@Andre_britto</string>
+    <string name="txtNome5">.@Maria_Ju</string>
+    <string name="txtNome6">.@Calvin</string>
+
+
+    //posts
+    <string name="txtpost1">Uma coisa que me salvou no enem foi ter repertório na hora da redação, isso é fundamental para conseguir garantir a tão sonhada nota 1000. É legal ver bastante filmes e séries com críticas sociais, também memorizar algumas citações genéricas, nome de autores e de livros também. Acreditem,os pequenos detalhes salvam a vida de nós estudantes.</string>
+    <string name="txtpost2">Sabe o que super me ajuda quando eu to estudando? Nos momentos que eu dou uma parada comer um chocolate recupera 100% das minhas energias.</string>
+    <string name="txtpost3">É importante ter momentos pra relaxar também, pegar uma onda, passear com os doguinhos, praticar uma atiividade fisica sair com os amigos... Sem isso não temos saúde para os estudos</string>
+    <string name="txtpost4">Gente diquinha de ouro pra vocês. Eu sei que esses momentos que temos que ficar focados nos estudos são difíceis mas eu aprendi com uma maravilhosa como acalmar a ansiedade e focar melhor: MEDITAÇÃO  e YOGA juro gentee, salva vidas e ajuda no foco de uma forma surreal.</string>
+    <string name="txtpost5">To prestando os vestibulares esse ano e tiveram livros que me salvaram na hora de fazer a prova. Vou dar algumas dicas pra vocês, leiam: 1. Dom Casmurro, de Machado de Assis, 2. O Cortiço, de Aluísio Azevedo, 3. Capitães de Areia, de Jorge Amado, 4. Memórias Póstumas de Brás Cubas, de Machado de Assis, 5. Grande Sertão: Veredas, de Guimarães Rosa.</string>
+
 </resources>

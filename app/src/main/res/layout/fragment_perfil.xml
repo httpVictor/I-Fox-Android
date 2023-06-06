@@ -61,17 +61,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="122dp"
-                android:layout_height="111dp"
-                android:layout_marginStart="16dp"
-                android:src="@android:drawable/ic_menu_camera"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.507" />
-
             <TextView
                 android:id="@+id/textNome"
                 android:layout_width="wrap_content"
@@ -81,10 +70,16 @@
                 android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.205"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.518" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="229dp"
+                android:layout_height="154dp"
+                android:src="@drawable/ifoxicon"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -106,7 +106,7 @@ public class AdapterResumo extends RecyclerView.Adapter<ViewHolderResumo> {
                         String url = "http://localhost:5000/api/Resumo";
                         RequestQueue requisicao = Volley.newRequestQueue(context);
                         JsonObjectRequest apagar = new JsonObjectRequest(Request.Method.DELETE,
-                                url + "?id=" + listaResumo.get(position).getCodigo(), null,
+                                url + "?id_resumo=" + listaResumo.get(position).getCodigo(), null,
                                 //sem nada no body
                                 new Response.Listener<JSONObject>() {
                                     @Override
